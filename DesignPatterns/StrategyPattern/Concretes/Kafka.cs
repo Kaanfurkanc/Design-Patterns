@@ -1,13 +1,8 @@
 ﻿using StrategyPattern.Strategy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StrategyPattern.Concretes
 {
-    public class Kafka : IQueue
+    public class Kafka : IQueueManager
     {
         public void AddToQueue(string value)
         {

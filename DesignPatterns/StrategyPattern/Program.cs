@@ -13,3 +13,9 @@ queueManager.SendToQueue(value);
 
 queueManager = new QueueManager(new RabbitMQ());
 queueManager.SendToQueue(value);
+
+
+// Using MsMQ
+
+queueManager = new QueueManager(new MsMQ());
+queueManager.SendToQueue(value);

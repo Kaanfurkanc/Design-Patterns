@@ -1,24 +1,29 @@
 ﻿using StrategyPattern.Strategy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
     public class QueueManager
     {
-        private IQueue _queue;
+        private IQueueManager _queue;
 
-        public QueueManager(IQueue queue)
+        public QueueManager(IQueueManager queue)
         {
             _queue = queue;
+        }
+
+        public QueueManager()
+        {
+            
         }
 
         public void SendToQueue(string value)
         {
             _queue.AddToQueue(value);
+        }
+
+        public void SetStrategy(IQueueManager queue)
+        {
+            _queue = queue;
         }
     }
 }
